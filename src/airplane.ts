@@ -24,10 +24,9 @@ const MIN_SPEED = 0.0;
     let [_, textSpeed, textYaw] = setupText(app);
     let airspeed: number = 0.0;
     let yaw: number = 0.0;
-
     const trajectory = new PIXI.Graphics()
         .moveTo(0, -25)
-        .lineTo(0, -app.screen.height)
+        .lineTo(0, -Math.max(app.screen.width, app.screen.height))
         .stroke({
             color: "white",
             width: 10,
